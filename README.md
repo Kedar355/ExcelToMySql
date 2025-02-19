@@ -33,24 +33,26 @@ Configure MySQL Database:
 Create a database named amazon_db.
 Run the following SQL command to create the transactions table:
 sql
+```CREATE DATABASE amazon_db;
+USE amazon_db;
 
-```CREATE TABLE transactions (
+CREATE TABLE transactions (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    txid VARCHAR(255),
-    store VARCHAR(255),
-    productid VARCHAR(255),
-    title VARCHAR(255),
+    txid VARCHAR(50),
+    store VARCHAR(50),
+    productid VARCHAR(50),
+    title TEXT,
     category_id INT,
-    category VARCHAR(255),
-    sales DOUBLE,
-    price DOUBLE,
-    commission DOUBLE,
+    category VARCHAR(100),
+    sales DECIMAL(10,2),
+    price DECIMAL(10,2),
+    commission DECIMAL(10,2),
     order_date DATE,
-    pid VARCHAR(255),
-    affid1 VARCHAR(255),
-    status VARCHAR(255),
-    added_at TIMESTAMP,
-    last_updated TIMESTAMP
+    pid VARCHAR(50),
+    affid1 VARCHAR(50),
+    status VARCHAR(50),
+    added_at DATETIME,
+    last_updated DATETIME
 );
 ```
 Update Database Credentials: Modify DB_URL, USER, and PASSWORD in ExcelToDatabase.java to match your MySQL settings.
