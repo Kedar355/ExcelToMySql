@@ -34,7 +34,7 @@ Create a database named amazon_db.
 Run the following SQL command to create the transactions table:
 sql
 
-CREATE TABLE transactions (
+```CREATE TABLE transactions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     txid VARCHAR(255),
     store VARCHAR(255),
@@ -52,6 +52,7 @@ CREATE TABLE transactions (
     added_at TIMESTAMP,
     last_updated TIMESTAMP
 );
+```
 Update Database Credentials: Modify DB_URL, USER, and PASSWORD in ExcelToDatabase.java to match your MySQL settings.
 
 Run the Java Backend: Compile and execute the Java program:
